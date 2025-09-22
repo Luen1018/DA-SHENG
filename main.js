@@ -1,4 +1,4 @@
-// ¸ü¤J°Ó«~¸ê®Æ
+// è¼‰å…¥å•†å“è³‡æ–™
 fetch('products.json')
   .then(response => response.json())
   .then(products => {
@@ -6,7 +6,7 @@ fetch('products.json')
     initCategorySelect(products);
     displayProducts(products);
 
-    // ¸j©w·j´M»P¤ÀÃþªº¨Æ¥ó
+    // ç¶å®šæœå°‹èˆ‡åˆ†é¡žçš„äº‹ä»¶
     document.getElementById('searchInput').addEventListener('input', () => {
       filterAndDisplay();
     });

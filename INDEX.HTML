@@ -6,7 +6,7 @@
   <title>商品刊登與展示</title>
 
   <!-- 引入 Bootstrap CSS CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- 自己的樣式 -->
   <link rel="stylesheet" href="css/style.css">
@@ -25,16 +25,27 @@
           <li class="nav-item">
             <a class="nav-link active" href="#">首頁</a>
           </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#add-product-section">刊登商品</a>
-          </li>
         </ul>
       </div>
     </div>
   </nav>
 
   <div class="container mb-5">
-    <section id="add-product-section" class="card p-4 mb-5 bg-white shadow-sm">
+
+    <!-- 登入表單，只讓你能看到刊登部分 -->
+    <section id="login-section" class="card p-4 mb-5 bg-white shadow-sm">
+      <h2 class="h4 mb-3">管理員登入</h2>
+      <form id="loginForm">
+        <div class="mb-3">
+          <label class="form-label">密碼</label>
+          <input type="password" class="form-control" id="adminPassword" placeholder="輸入管理員密碼">
+        </div>
+        <button type="submit" class="btn btn-primary">登入</button>
+      </form>
+    </section>
+
+    <!-- 刊登新商品表單，預設隱藏 -->
+    <section id="add-product-section" class="card p-4 mb-5 bg-white shadow-sm" style="display: none;">
       <h2 class="h4 mb-3">刊登新商品</h2>
       <form id="addProductForm">
         <div class="mb-3">
@@ -47,7 +58,15 @@
         </div>
         <div class="mb-3">
           <label class="form-label">分類</label>
-          <input type="text" class="form-control" id="productCategory" required>
+          <select class="form-select" id="productCategory" required>
+            <option value="">請選分類</option>
+            <option value="汽車">汽車</option>
+            <option value="機車">機車</option>
+            <option value="精品">精品</option>
+            <option value="手錶">手錶</option>
+            <option value="藝品">藝品</option>
+            <option value="珠寶">珠寶</option>
+          </select>
         </div>
         <div class="mb-3">
           <label class="form-label">圖片 URL（選填）</label>
@@ -55,6 +74,20 @@
         </div>
         <button type="submit" class="btn btn-primary">刊登商品</button>
       </form>
+    </section>
+
+    <!-- 篩選商品分類 -->
+    <section id="filter-section" class="mb-4">
+      <label>篩選分類：</label>
+      <select id="filterCategory" class="form-select w-auto d-inline-block">
+        <option value="">所有分類</option>
+        <option value="汽車">汽車</option>
+        <option value="機車">機車</option>
+        <option value="精品">精品</option>
+        <option value="手錶">手錶</option>
+        <option value="藝品">藝品</option>
+        <option value="珠寶">珠寶</option>
+      </select>
     </section>
 
     <section id="products-display">
@@ -65,9 +98,7 @@
     </section>
   </div>
 
-  <!-- 引入 Bootstrap JS（如果你以後要用一些互動元件，例如 collapse 或 modal） -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09C...snip..." crossorigin="anonymous"></script>
-
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
   <script src="js/app.js"></script>
 </body>
 </html>

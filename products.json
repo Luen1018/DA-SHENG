@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "無線滑鼠 M-100",
+    "price": 799,
+    "category": "滑鼠",
+    "image": "https://picsum.photos/seed/mouse1/300/200"
+  },
+  {
+    "id": 2,
+    "title": "機械鍵盤 K-87",
+    "price": 2390,
+    "category": "鍵盤",
+    "image": "https://picsum.photos/seed/keyboard1/300/200"
+  },
+  {
+    "id": 3,
+    "title": "27 吋 2K 螢幕",
+    "price": 6990,
+    "category": "顯示器",
+    "image": "https://picsum.photos/seed/monitor1/300/200"
+  }
+]

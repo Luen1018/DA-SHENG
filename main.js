@@ -1,5 +1,5 @@
 // 密碼（請你自己更改這個值為你理解的密碼）
-const ADMIN_PASSWORD = 'admin123';
+const ADMIN_PASSWORD = '123456';
 
 // 先從 localStorage 拿商品資料
 let products = JSON.parse(localStorage.getItem('products')) || [];
@@ -102,3 +102,4 @@ function renderProducts() {
 
 // 初始渲染
 renderProducts();
+

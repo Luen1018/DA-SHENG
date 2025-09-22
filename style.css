@@ -1,36 +1,30 @@
-/* 調整 body 背景與字體 */
 body {
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-/* 卡片圖片比例控制 */
 .product-card img {
   object-fit: cover;
   height: 200px;
 }
 
-/* 卡片 hover 效果 */
 .product-card:hover {
   transform: translateY(-5px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.15);
   transition: all 0.3s ease;
 }
 
-/* 卡片標題文字 */
 .product-card .card-title {
   font-size: 1.1rem;
   font-weight: bold;
 }
 
-/* 價格文字顏色 */
 .product-card .price {
-  color: #dc3545; /* Bootstrap 的 danger 色 */
+  color: #dc3545;
   font-size: 1.2rem;
   font-weight: bold;
 }
 
-/* 分類文字淡色 */
 .product-card .category {
   font-size: 0.9rem;
-  color: #6c757d; /* Bootstrap text-muted 顏色 */
+  color: #6c757d;
 }

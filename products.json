@@ -1,23 +1,23 @@
 [
   {
     "id": 1,
-    "title": "µL½u·Æ¹« M-100",
+    "title": "ç„¡ç·šæ»‘é¼  M-100",
     "price": 799,
-    "category": "·Æ¹«",
+    "category": "æ»‘é¼ ",
     "image": "https://picsum.photos/seed/mouse1/300/200"
   },
   {
     "id": 2,
-    "title": "¾÷±ñÁä½L K-87",
+    "title": "æ©Ÿæ¢°éµç›¤ K-87",
     "price": 2390,
-    "category": "Áä½L",
+    "category": "éµç›¤",
     "image": "https://picsum.photos/seed/keyboard1/300/200"
   },
   {
     "id": 3,
-    "title": "27 ¦T 2K ¿Ã¹õ",
+    "title": "27 å‹ 2K è¢å¹•",
     "price": 6990,
-    "category": "Åã¥Ü¾¹",
+    "category": "é¡¯ç¤ºå™¨",
     "image": "https://picsum.photos/seed/monitor1/300/200"
   }
 ]

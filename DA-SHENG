@@ -1,6 +1,10 @@
 DA-SHENG/
-|-- INDEX.HTML
-|-- css/
-|     |-- style.css
-|-- js/
-|     |-- main.js
+/index.html
+/login.html
+/js/
+  ├── main.js
+  └── login.js
+/css/
+  └── styles.css
+/images/
+  └── default.jpg

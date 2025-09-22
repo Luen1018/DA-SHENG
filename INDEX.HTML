@@ -1,81 +1,27 @@
 <!DOCTYPE html>
-<html lang="zh-Hant">
+<html lang="zh-TW">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>商品刊登與展示</title>
-
-  <!-- 引入 Bootstrap CSS CDN -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-
-  <!-- 自己的樣式 -->
-  <link rel="stylesheet" href="css/style.css">
+  <title>商品平台</title>
+  <link rel="stylesheet" href="css/styles.css">
 </head>
-<body class="bg-light">
+<body>
+  <header>
+    <nav>
+      <a href="index.html">首頁</a>
+      <a href="login.html" id="adminLoginBtn">管理員登入</a>
+    </nav>
+  </header>
 
-  <nav class="navbar navbar-expand-lg navbar-dark bg-primary mb-4">
-    <div class="container">
-      <a class="navbar-brand" href="#">大升</a>
-      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" 
-        aria-controls="navbarNav" aria-expanded="false" aria-label="切換導覽">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ms-auto">
-          <li class="nav-item">
-            <!-- 使用 Bootstrap 的排版工具來並排顯示按鈕 -->
-<div class="d-flex justify-content-between align-items-center p-3">
-  <!-- 首頁按鈕 -->
-  <a href="index.html" class="btn btn-outline-light">首頁</a>
-  
-  <!-- 管理員登入按鈕 -->
-  <a href="login.html" class="btn btn-outline-light">管理員登入</a>
-</div>
-          </li>
-        </ul>
-      </div>
-    </div>
-  </nav>
+  <section id="productList"></section>
 
-  <div class="container mb-5">
-
-    <!-- 刊登新商品表單，預設隱藏 -->
-    <section id="add-product-section" class="card p-4 mb-5 bg-white shadow-sm" style="display: none;">
-      <h2 class="h4 mb-3">刊登新商品</h2>
-      <form id="addProductForm">
-        <div class="mb-3">
-          <label class="form-label">商品名稱</label>
-          <input type="text" class="form-control" id="productTitle" required>
-        </div>
-        <div class="mb-3">
-          <label class="form-label">價格 (NT$)</label>
-          <input type="number" class="form-control" id="productPrice" required>
-        </div>
-        <div class="mb-3">
-          <label class="form-label">分類</label>
-          <select class="form-select" id="productCategory" required>
-            <option value="">請選分類</option>
-            <option value="汽車">汽車</option>
-            <option value="機車">機車</option>
-            <option value="精品">精品</option>
-            <option value="手錶">手錶</option>
-            <option value="藝品">藝品</option>
-            <option value="珠寶">珠寶</option>
-          </select>
-        </div>
-        <div class="mb-3">
-          <label class="form-label">圖片 URL（選填）</label>
-          <input type="url" class="form-control" id="productImage" placeholder="https://...">
-        </div>
-        <button type="submit" class="btn btn-primary">刊登商品</button>
-      </form>
-    </section>
-
-    <!-- 篩選商品分類 -->
-    <section id="filter-section" class="mb-4">
-      <label>篩選分類：</label>
-      <select id="filterCategory" class="form-select w-auto d-inline-block">
-        <option value="">所有分類</option>
+  <section id="addProductSection" style="display: none;">
+    <h2>刊登商品</h2>
+    <form id="addProductForm">
+      <input type="text" id="productTitle" placeholder="商品名稱" required>
+      <input type="number" id="productPrice" placeholder="價格" required>
+      <select id="productCategory">
         <option value="汽車">汽車</option>
         <option value="機車">機車</option>
         <option value="精品">精品</option>
@@ -83,26 +29,11 @@
         <option value="藝品">藝品</option>
         <option value="珠寶">珠寶</option>
       </select>
-    </section>
+      <input type="url" id="productImage" placeholder="圖片網址">
+      <button type="submit">新增商品</button>
+    </form>
+  </section>
 
-    <section id="products-display">
-      <h2 class="h4 mb-3">所有商品</h2>
-      <div id="productList" class="row g-4">
-        <!-- 商品卡片會動態生成在這裡 -->
-      </div>
-    </section>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
-  <script src="js/app.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
